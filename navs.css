@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --FF: "Quicksand", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-nav {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.main-nav ul {
+  display: flex;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.main-nav li {
+  display: flex;
+  list-style-type: none;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--FF);
+  font-size: clamp(1rem, 2vw, 54px);
+  padding: 2rem 0.5rem;
+  animation: nav-links 4s ease-in 0s 1 normal forwards;
+}
+
+.main-nav a:hover {
+  background-color: rgb(112, 150, 161);
+  text-decoration: overline;
+
+  background-image: linear-gradient(#6197a8, #558ca2);
+  display: inline-block;
+  border-radius: 20px;
+}
+
+#submenu {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 35px;
+  visibility: hidden;
+  z-index: 1;
+}
+
+li:hover ul#submenu {
+  opacity: 1;
+  top: 80px;
+  visibility: visible;
+}
+
+#submenu {
+  float: none;
+  width: 100%;
+}
+
+.bg {
+  background-image: url(./images/rock\ formation\ .jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.7);
+}
+
+.h1-container {
+  display: grid;
+  place-content: center;
+  height: 50%;
+  text-align: center;
+}
+
+.h1-container h1 {
+  font-size: clamp(1rem, 6.4vw, 6rem);
+  color: #fff;
+  animation: h1 2s ease-in-out 0s 1 normal forwards;
+}
+
+section .button {
+  display: grid;
+}
+
+button {
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+  border-radius: 10px;
+  border-left: 3px solid gray;
+}
+
+.button a {
+  color: #fff;
+  text-decoration: none;
+  font: 1rem var(--FF);
+}
+
+@keyframes h1 {
+  0% {
+    color: #391a0a;
+    transform: translateX(-1200px);
+  }
+
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes nav-links {
+  0% {
+    transform: translatex(2000px);
+  }
+}
+
+/* About Page */
+
+section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+figcaption {
+  color: #fff;
+  text-align: center;
+  font-family: var(--FF);
+  font-size: 2rem;
+}
+
+p {
+  color: #fff;
+  font-family: var(--FF);
+  line-height: 2;
+}
